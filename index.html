@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рекомендации по взаимодействию при подозрении на туберкулез | ГБУЗ МО МОКПТД</title>
+    <title>Рекомендации для врачей-патологоанатомов и врачей-судебно-медицинских экспертов</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -253,6 +253,56 @@
             color: var(--primary-blue);
         }
         
+        /* === КНОПКА СКАЧИВАНИЯ QR-КОДА === */
+        .qr-download-container {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--light-blue);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--gray-medium);
+        }
+        
+        .qr-download-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .qr-download-text {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .qr-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .qr-download-btn:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .qr-download-btn i {
+            font-size: 1.2rem;
+        }
+        
         /* === ФУТЕР === */
         .document-footer {
             margin-top: 3rem;
@@ -287,7 +337,7 @@
         }
         
         @media print {
-            .toc-container, .document-footer {
+            .toc-container, .document-footer, .qr-download-container {
                 display: none;
             }
             
@@ -300,11 +350,11 @@
 <body>
     <!-- Заголовок и вводная информация -->
     <header class="document-header">
-        <h1 class="document-title">РЕКОМЕНДАЦИИ ДЛЯ ВРАЧЕЙ-ПАТОЛОГОАНАТОМОВ И ВРАЧЕЙ-СУДЕБНО-МЕДИЦИНСКИХ ЭКСПЕРТОВ ПО ОРГАНИЗАЦИИ ВЗАИМОДЕЙСТВИЯ ПРИ ПОДОЗРЕНИИ НА ТУБЕРКУЛЕЗ</h1>
+        <h1 class="document-title">Рекомендации для врачей-патологоанатомов и врачей-судебно-медицинских экспертов</h1>
         <p class="document-subtitle">Краткое ознакомительное изложение ключевых моментов</p>
         
         <div class="important-note">
-            <p><strong>Важное примечание:</strong> Данная памятка является кратким ознакомительным изложением ключевых моментов. Полная, официальная процедура подробно описана в <strong><a href="[ССЫЛКА_НА_ПРИКАЗ]" target="_blank">Приказе МЗ МО от 25.12.2020 № 1725</a></strong>. Ответственность за соблюдение <strong>всех требований данного приказа, а также действующих санитарно-эпидемиологических правил, норм безопасности и стандартов работы с биологическим материалом</strong> лежит на врачах-судебно-медицинских экспертах и врачах-патологоанатомах.</p>
+            <p><strong>Важное примечание:</strong> Данная памятка является кратким ознакомительным изложением ключевых моментов. Полная, официальная процедура подробно описана в <strong><a href="[ССЫЛКА_НА_ПРИКАЗ]" target="_blank">Приказе МЗ МО от 25.12.2020 № 1725 «О порядке взаимодействия врачей-патологоанатомов, врачей-судебно-медицинских экспертов и врачей-фтизиатров на территории Московской области»</a></strong>. Ответственность за соблюдение <strong>всех требований данного приказа, а также действующих санитарно-эпидемиологических правил, норм безопасности и стандартов работы с биологическим материалом</strong> лежит на врачах-судебно-медицинских экспертах и врачах-патологоанатомах.</p>
         </div>
     </header>
 
@@ -312,21 +362,21 @@
     <nav class="toc-container">
         <h2 class="toc-title"><i class="fas fa-list"></i> Содержание</h2>
         <ul class="toc-list">
-            <li><a href="#principles">ОСНОВНЫЕ ПРИНЦИПЫ</a></li>
-            <li><a href="#step1">ШАГ 1: Немедленное уведомление (в день вскрытия)</a></li>
-            <li><a href="#step2">ШАГ 2: Получение обратной связи</a></li>
-            <li><a href="#step3">ШАГ 3: Забор материала</a></li>
-            <li><a href="#step4">ШАГ 4: Передача данных и совместная оценка</a></li>
-            <li><a href="#step5">ШАГ 5: Оформление и регистрация</a></li>
-            <li><a href="#org">ВАЖНЫЕ ОРГАНИЗАЦИОННЫЕ АСПЕКТЫ</a></li>
-            <li><a href="#why">ЗАЧЕМ ЭТО НУЖНО?</a></li>
+            <li><a href="#principles">Основные принципы</a></li>
+            <li><a href="#step1">Шаг 1: Немедленное уведомление (в день вскрытия)</a></li>
+            <li><a href="#step2">Шаг 2: Получение обратной связи</a></li>
+            <li><a href="#step3">Шаг 3: Забор материала</a></li>
+            <li><a href="#step4">Шаг 4: Передача данных и совместная оценка</a></li>
+            <li><a href="#step5">Шаг 5: Оформление и регистрация</a></li>
+            <li><a href="#org">Важные организационные аспекты</a></li>
+            <li><a href="#why">Зачем это нужно?</a></li>
         </ul>
     </nav>
 
     <!-- ОСНОВНЫЕ ПРИНЦИПЫ -->
     <section class="step-container" id="principles">
         <div class="step-header">
-            <h2 class="step-title">ОСНОВНЫЕ ПРИНЦИПЫ:</h2>
+            <h2 class="step-title">Основные принципы:</h2>
         </div>
         <div class="step-content">
             <ol>
@@ -355,7 +405,7 @@
             </ul>
             <div class="contact-info">
                 <p><i class="fas fa-phone-alt"></i> <strong>Дополнительно для ускорения координации по г.о. Клин, Солнечногорск, Химки, Долгопрудный, Лобня:</strong></p>
-                <p><strong>Лукаш И.А. (Клинский филиал): 8-915-386-15-85</strong>.</p>
+                <p><strong>Лукаш Игорь Александрович, заведующий филиалом Клинский: 8-915-386-15-85</strong>.</p>
             </div>
         </div>
     </section>
@@ -399,7 +449,7 @@
         </div>
         <div class="step-content">
             <ul>
-                <li>По завершении вскрытия <strong>передать копию протокола (выписку из акта) врачу-фтизиатру (требование п. 8 приложения «Порядок» к Приказу МЗ МО от 25.12.2020 № 1725).</strong>
+                <li>По завершении вскрытия <strong>передать копию протокола (выписку из акта) врачу-фтизиатру (требование п. 8 приложения «Порядок» к Приказу МЗ МО от 25.12.2020 № 1725 «О порядке взаимодействия врачей-патологоанатомов, врачей-судебно-медицинских экспертов и врачей-фтизиатров на территории Московской области»).</strong>
                     <br><em>Цель передачи: первичный анализ фтизиатром и подготовка материалов для врачебной комиссии и представления в МОКПТД.</em>
                 </li>
                 <li><strong>Совместно с фтизиатром оценить:</strong> был ли выявленный туберкулезный процесс <strong>достаточным (по объему и характеру)</strong>, чтобы быть <strong>основной причиной смерти</strong>, или является сопутствующим заболеванием. <strong>Исключить регистрацию смерти от ТБ при незначительных изменениях.</strong></li>
@@ -424,13 +474,13 @@
     <!-- ОРГАНИЗАЦИОННЫЕ АСПЕКТЫ -->
     <section class="step-container" id="org">
         <div class="step-header">
-            <h2 class="step-title">ВАЖНЫЕ ОРГАНИЗАЦИОННЫЕ АСПЕКТЫ:</h2>
+            <h2 class="step-title">Важные организационные аспекты:</h2>
         </div>
         <div class="step-content">
             <ol>
                 <li><span class="key-point">Коллегиальный разбор всех случаев:</span> ежемесячно (в стационаре), ежеквартально (вне стационара).</li>
                 <li><span class="key-point">Консультации МОКПТД:</span> доступны для сложных микроскопических исследований.</li>
-                <li><span class="key-point">Ответственность:</span> Полная процедура и ответственность за соблюдение всех требований изложены в тексте <strong><a href="[ССЫЛКА_НА_ПРИКАЗ]" target="_blank">Приказа МЗ МО от 25.12.2020 № 1725</a></strong>.</li>
+                <li><span class="key-point">Ответственность:</span> Полная процедура и ответственность за соблюдение всех требований изложены в тексте <strong><a href="[ССЫЛКА_НА_ПРИКАЗ]" target="_blank">Приказа МЗ МО от 25.12.2020 № 1725 «О порядке взаимодействия врачей-патологоанатомов, врачей-судебно-медицинских экспертов и врачей-фтизиатров на территории Московской области»</a></strong>.</li>
             </ol>
         </div>
     </section>
@@ -438,7 +488,7 @@
     <!-- ЗАЧЕМ ЭТО НУЖНО -->
     <section class="step-container" id="why">
         <div class="step-header">
-            <h2 class="step-title">ЗАЧЕМ ЭТО НУЖНО?</h2>
+            <h2 class="step-title">Зачем это нужно?</h2>
         </div>
         <div class="step-content">
             <ol>
@@ -451,6 +501,17 @@
             </ol>
         </div>
     </section>
+
+    <!-- БЛОК СКАЧИВАНИЯ QR-КОДА -->
+    <div class="qr-download-container">
+        <h3 class="qr-download-title">QR-код для быстрого доступа</h3>
+        <p class="qr-download-text">
+            Вы можете скачать QR-код этой инструкции для размещения на стенде в патологоанатомическом отделении или бюро судебно-медицинской экспертизы. При сканировании код откроет полную версию памятки.
+        </p>
+        <a href="qr-sudmed.png" download="QR-код_Памятка_патологоанатомам.png" class="qr-download-btn">
+            <i class="fas fa-qrcode"></i> Скачать QR-код для стенда
+        </a>
+    </div>
 
     <!-- Футер -->
     <footer class="document-footer">
