@@ -3,58 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рекомендации для врачей-патологоанатомов и врачей-судебно-медицинских экспертов</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Памятка при подозрении на туберкулёз на вскрытии</title>
     <style>
         @font-face {
-    font-family: 'Inter';
-    src: url('./fonts/inter-cyrillic-400-normal.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
+            font-family: 'Inter';
+            src: url('./fonts/inter-cyrillic-400-normal.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('./fonts/inter-cyrillic-500-normal.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
+        @font-face {
+            font-family: 'Inter';
+            src: url('./fonts/inter-cyrillic-500-normal.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('./fonts/inter-cyrillic-600-normal.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
+        @font-face {
+            font-family: 'Inter';
+            src: url('./fonts/inter-cyrillic-600-normal.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('./fonts/inter-cyrillic-700-normal.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-        
-        :root {
-            --primary-blue: #1A5F9E;
-            --secondary-blue: #2C8BD4;
-            --light-blue: #F0F7FF;
-            --accent-red: #D32F2F;
-            --accent-green: #2E7D32;
-            --white: #FFFFFF;
-            --gray-light: #F5F7FA;
-            --gray-medium: #E0E5EC;
-            --gray-dark: #455A64;
-            --text-primary: #263238;
-            --text-secondary: #546E7A;
-            
-            --shadow-medium: 0 4px 12px rgba(26, 95, 158, 0.08);
-            --border-radius: 8px;
+        @font-face {
+            font-family: 'Inter';
+            src: url('./fonts/inter-cyrillic-700-normal.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
         }
         
+        /* Основные стили */
         * {
             margin: 0;
             padding: 0;
@@ -63,532 +46,264 @@
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background-color: var(--white);
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            max-width: 1200px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
         
-        /* === ЗАГОЛОВОК И ВВОДНАЯ ИНФОРМАЦИЯ === */
-        .document-header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+        /* Синяя шапка */
+        .header {
+            background: #1A5F9E;
             color: white;
-            padding: 2.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 2.5rem;
-            box-shadow: var(--shadow-medium);
+            padding: 25px 30px;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 0;
         }
         
-                .document-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
         
-        .document-subtitle {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
+        .header p {
+            opacity: 0.9;
+            font-size: 1rem;
+            margin-bottom: 10px;
         }
         
-        .important-note {
-            background: rgba(255, 255, 255, 0.15);
-            border-left: 4px solid var(--accent-red);
-            padding: 1.2rem;
-            border-radius: 4px;
-            margin-top: 1.5rem;
-            font-size: 0.95rem;
-        }
-        
-        .important-note a {
+        .header a {
             color: #FFEB3B;
             font-weight: 600;
             text-decoration: underline;
         }
-        .important-note a:hover {
-            text-decoration: none;
+        
+        /* Красная линия-разделитель */
+        .red-line {
+            height: 4px;
+            background: #D32F2F;
+            width: 100%;
+            margin-bottom: 30px;
         }
         
-        /* === ОГЛАВЛЕНИЕ === */
-        .toc-container {
-            background: var(--light-blue);
-            border-radius: var(--border-radius);
-            padding: 1.8rem;
-            margin-bottom: 2.5rem;
-            border: 1px solid var(--gray-medium);
+        /* Основное содержимое */
+        .content {
+            padding: 0 20px;
         }
         
-        .toc-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        h2 {
+            color: #1A5F9E;
+            font-size: 1.5rem;
+            margin: 25px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #E0E0E0;
         }
         
-        .toc-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
+        /* Алгоритм */
+        .algorithm {
+            background: #F5F7FA;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #2C8BD4;
         }
         
-        .toc-list li {
-            padding: 8px 0;
-            position: relative;
-            padding-left: 24px;
+        .algorithm ol {
+            margin-left: 20px;
         }
         
-        .toc-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            color: var(--secondary-blue);
-            font-weight: bold;
-        }
-        
-        .toc-list a {
-            color: var(--text-primary);
-            text-decoration: none;
+        .algorithm li {
+            margin-bottom: 15px;
             font-weight: 500;
-            transition: color 0.2s;
+            line-height: 1.5;
         }
         
-        .toc-list a:hover {
-            color: var(--primary-blue);
-            text-decoration: underline;
+        /* Контакты */
+        .contacts {
+            background: #F0F7FF;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #2C8BD4;
         }
         
-        /* === БЛОКИ ЭТАПОВ === */
-        .step-container {
-            margin-bottom: 3rem;
+        .contacts ul {
+            list-style: none;
+            margin-left: 0;
         }
         
-        .step-header {
-            background: var(--light-blue);
-            padding: 1.5rem;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-            border-bottom: 2px solid var(--secondary-blue);
-            display: flex;
-            align-items: center;
-            gap: 15px;
+        .contacts li {
+            margin-bottom: 12px;
+            line-height: 1.5;
         }
         
-        .step-number {
-            background: var(--primary-blue);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            flex-shrink: 0;
+        .contacts strong {
+            color: #1A5F9E;
         }
         
-        .step-title {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-        }
-        
-        .step-content {
-            border: 1px solid var(--gray-medium);
-            border-top: none;
-            border-radius: 0 0 var(--border-radius) var(--border-radius);
-            padding: 2rem;
-            background: var(--white);
-        }
-        
-        .subsection {
-            margin-bottom: 1.8rem;
-        }
-        
-        .subsection-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .subsection-title i {
-            color: var(--secondary-blue);
-        }
-        
-        .subsection-content {
-            color: var(--text-secondary);
-            margin-left: 28px;
-        }
-        
-        .highlight-box {
+        /* Ключевые моменты */
+        .key-points {
             background: #FFF8E1;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
             border-left: 4px solid #FFB300;
-            padding: 1.2rem;
-            margin: 1.2rem 0;
-            border-radius: 0 4px 4px 0;
         }
         
-        .warning-box {
-            background: #FFEBEE;
-            border-left: 4px solid var(--accent-red);
-            padding: 1.2rem;
-            margin: 1.2rem 0;
-            border-radius: 0 4px 4px 0;
+        .key-points li {
+            margin-bottom: 10px;
+            line-height: 1.5;
         }
         
-        .success-box {
-            background: #E8F5E9;
-            border-left: 4px solid var(--accent-green);
-            padding: 1.2rem;
-            margin: 1.2rem 0;
-            border-radius: 0 4px 4px 0;
-        }
-        
-        /* === СПИСКИ === */
-        ul, ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-            color: var(--text-secondary);
-        }
-        
-        .key-point {
-            font-weight: 600;
-            color: var(--primary-blue);
-        }
-        
-        .contact-info {
-            background: var(--light-blue);
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            margin: 1rem 0;
-            border-left: 4px solid var(--secondary-blue);
-        }
-        .contact-info strong {
-            color: var(--primary-blue);
-        }
-        
-        /* === КНОПКА СКАЧИВАНИЯ QR-КОДА === */
-        .qr-download-container {
+        /* Кнопка скачивания для стенда */
+        .download-container {
             text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background: var(--light-blue);
-            border-radius: var(--border-radius);
-            border: 1px solid var(--gray-medium);
+            margin: 30px 0;
         }
         
-        .qr-download-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-        
-        .qr-download-text {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .qr-download-btn {
+        .download-btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: var(--primary-blue);
+            background: #1A5F9E;
             color: white;
             padding: 12px 24px;
-            border-radius: var(--border-radius);
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s;
             border: 2px solid transparent;
+            cursor: pointer;
         }
         
-        .qr-download-btn:hover {
-            background: var(--secondary-blue);
+        .download-btn:hover {
+            background: #2C8BD4;
             transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+            box-shadow: 0 4px 12px rgba(26, 95, 158, 0.08);
         }
         
-        .qr-download-btn i {
-            font-size: 1.2rem;
-        }
-        
-        /* === ФУТЕР === */
-        .document-footer {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px solid var(--gray-medium);
+        /* Футер */
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #E0E0E0;
             text-align: center;
-            color: var(--text-secondary);
+            color: #666;
             font-size: 0.9rem;
         }
         
-        /* === АДАПТИВНОСТЬ === */
+        /* Адаптивность */
         @media (max-width: 768px) {
             body {
                 padding: 15px;
             }
             
-            .document-header {
-                padding: 1.8rem;
+            .header {
+                padding: 20px;
             }
             
-            .document-title {
-                font-size: 1.8rem;
+            .header h1 {
+                font-size: 1.5rem;
             }
             
-            .toc-list {
-                grid-template-columns: 1fr;
+            .algorithm, .contacts, .key-points {
+                padding: 20px;
             }
             
-            .step-content {
-                padding: 1.5rem;
+            .content {
+                padding: 0 10px;
             }
         }
         
         @media print {
-            .toc-container, .document-footer, .qr-download-container {
+            body {
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .header {
+                border-radius: 0;
+                margin-bottom: 20px;
+            }
+            
+            .download-container {
                 display: none;
             }
             
-            body {
-                max-width: 100%;
+            .footer {
+                border-top: none;
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Заголовок и вводная информация -->
-    <header class="document-header">
-        <h1 class="document-title">Рекомендации для врачей-патологоанатомов и врачей-судебно-медицинских экспертов при выявлении туберкулёза на вскрытии</h1>
-        <p class="document-subtitle">Краткое ознакомительное изложение ключевых моментов</p>
+    <!-- Синяя шапка -->
+    <div class="header">
+        <h1>Памятка при подозрении на туберкулёз на вскрытии</h1>
+        <p><strong>Обратная связь от фтизиатров поможет вам точно определить причину смерти, верифицировать диагноз и правильно оформить документацию при подозрении на туберкулёз.</strong></p>
+        <p>Требуется <a href="./prikaz-1725.pdf" target="_blank">Приказом Минздрава МО №1725 («О порядке взаимодействия врачей-патологоанатомов, врачей-судебно-медицинских экспертов и врачей-фтизиатров на территории Московской области»)</a> от 25.12.2020.</p>
+    </div>
+    
+    <!-- Красная линия -->
+    <div class="red-line"></div>
+    
+    <div class="content">
+        <!-- Алгоритм действий -->
+        <h2>АЛГОРИТМ ДЕЙСТВИЙ</h2>
+        <div class="algorithm">
+            <ol>
+                <li><strong>Позвонить на горячую линию в день вскрытия</strong></li>
+                <li><strong>Получить от фтизиатра</strong> подтверждение/исключение прижизненного диагноза ТБ</li>
+                <li><strong>Получить от фтизиатра</strong> помощь в установлении ВИЧ-статуса умершего</li>
+                <li><strong>Взять материал</strong> на микробиологическое исследование для лаборатории МОКПТД</li>
+                <li><strong>Взять материал</strong> на ВИЧ (при неизвестном статусе)</li>
+                <li><strong>Передать фтизиатру копию протокола</strong> для совместной оценки причины смерти и подготовки к проведению разбора случая</li>
+                <li><strong>Оформить документы</strong> (извещение в Роспотребнадзор, при необходимости — новое свидетельство о смерти)</li>
+            </ol>
+        </div>
         
-        <div class="important-note">
-            <p><strong>Важное примечание:</strong> Данная памятка является кратким ознакомительным изложением ключевых моментов. Полная, официальная процедура подробно описана в <strong><a href="./prikaz-1725.pdf" target="_blank">Приказе МЗ МО от 25.12.2020 № 1725 «О порядке взаимодействия врачей-патологоанатомов, врачей-судебно-медицинских экспертов и врачей-фтизиатров на территории Московской области»</a></strong>.</p>
-        </div>
-    </header>
-
-    <!-- Оглавление -->
-    <nav class="toc-container">
-        <h2 class="toc-title"><i class="fas fa-list"></i> Содержание</h2>
-        <ul class="toc-list">
-            <li><a href="#principles">Основные принципы</a></li>
-            <li><a href="#step1">Шаг 1: Немедленное уведомление (в день вскрытия)</a></li>
-            <li><a href="#step2">Шаг 2: Получение обратной связи</a></li>
-            <li><a href="#step3">Шаг 3: Забор материала</a></li>
-            <li><a href="#step4">Шаг 4: Передача данных и совместная оценка</a></li>
-            <li><a href="#step5">Шаг 5: Оформление и регистрация</a></li>
-            <li><a href="#org">Важные организационные аспекты</a></li>
-            <li><a href="#why">Зачем это нужно?</a></li>
-        </ul>
-    </nav>
-
-    <!-- ОСНОВНЫЕ ПРИНЦИПЫ -->
-    <section class="step-container" id="principles">
-        <div class="step-header">
-            <h2 class="step-title">Основные принципы:</h2>
-        </div>
-        <div class="step-content">
-            <ol>
-                <li><span class="key-point">Цель</span> – повышение достоверности статистики смертности от туберкулеза, выявление дефектов диагностики и лечения.</li>
-                <li><span class="key-point">Задача врача</span> – немедленно информировать фтизиатрическую службу о <strong>любом случае смерти, где туберкулез заподозрен как возможная причина</strong>.</li>
-                <li><span class="key-point">Координатор</span> – ГБУЗ МО «Московский областной клинический противотуберкулезный диспансер» (МОКПТД).</li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- ШАГ 1 -->
-    <section class="step-container" id="step1">
-        <div class="step-header">
-            <div class="step-number">1</div>
-            <h2 class="step-title">Немедленное уведомление (в день вскрытия)</h2>
-        </div>
-        <div class="step-content">
+        <!-- Контакты -->
+        <h2>КОНТАКТЫ ДЛЯ СВЯЗИ (ГБУЗ МО МОКПТД)</h2>
+        <div class="contacts">
             <ul>
-                <li><span class="key-point">Куда:</span> В ГБУЗ МО «МОКПТД».</li>
-                <li><span class="key-point">Как:</span>
-                    <ul>
-                        <li><strong>Тел.: +7(499)-978-02-43</strong>.</li>
-                        <li><strong>E-mail: mz_mokptd@mosreg.ru</strong> (для дублирования/документов).</li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="contact-info">
-                <p><i class="fas fa-phone-alt"></i> <strong>Дополнительно для ускорения координации по г.о. Клин, Солнечногорск, Химки, Долгопрудный, Лобня:</strong></p>
-                <p><strong>Лукаш Игорь Александрович, заведующий филиалом Клинский: 8-915-386-15-85</strong>.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ШАГ 2 -->
-    <section class="step-container" id="step2">
-        <div class="step-header">
-            <div class="step-number">2</div>
-            <h2 class="step-title">Получение обратной связи</h2>
-        </div>
-        <div class="step-content">
-            <ul>
-                <li>В течение <strong>1 часа</strong> фтизиатр подтвердит/опровергнет прижизненный диагноз ТБ и <strong>поможет выяснить ВИЧ-статус</strong>.</li>
-                <li><strong>Важно:</strong> Установление ВИЧ-статуса обязательно для корректного определения первоначальной причины смерти.</li>
+                <li><strong>Телефон:</strong> +7 (499) 978-02-43</li>
+                <li><strong>E-mail:</strong> mz_mokptd@mosreg.ru</li>
+                <li><strong>Для ускорения</strong> (Клин, Солнечногорск, Химки, Долгопрудный, Лобня):<br>
+                    <strong>Лукаш Игорь Александрович</strong> (зав. филиалом «Клинский») — 8-915-386-15-85</li>
             </ul>
         </div>
-    </section>
-
-    <!-- ШАГ 3 -->
-    <section class="step-container" id="step3">
-        <div class="step-header">
-            <div class="step-number">3</div>
-            <h2 class="step-title">Забор материала</h2>
-        </div>
-        <div class="step-content">
+        
+        <!-- Ключевые моменты -->
+        <h2>КЛЮЧЕВЫЕ МОМЕНТЫ</h2>
+        <div class="key-points">
             <ul>
-                <li>Обязательно взять материал для <strong>бактериологического посева (культуральной диагностики) на МБТ</strong> и направить в лабораторию МОКПТД.</li>
-                <li>При необходимости (неизвестный статус) – взять материал для <strong>посмертного исследования на ВИЧ</strong>.</li>
-            </ul>
-            <div class="highlight-box">
-                <p><strong>Направление материала обеспечивает микробиологическую верификацию. В дальнейшем, при необходимости, может быть проведено морфологическое подтверждение на уровне диспансера.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ШАГ 4 -->
-    <section class="step-container" id="step4">
-        <div class="step-header">
-            <div class="step-number">4</div>
-            <h2 class="step-title">Передача данных и совместная оценка</h2>
-        </div>
-        <div class="step-content">
-            <ul>
-                <li>По завершении вскрытия <strong>передать копию протокола (выписку из акта) врачу-фтизиатру (требование п. 8 приложения «Порядок» к Приказу МЗ МО от 25.12.2020 № 1725 «О порядке взаимодействия врачей-патологоанатомов, врачей-судебно-медицинских экспертов и врачей-фтизиатров на территории Московской области»).</strong>
-                    <br><em>Цель передачи: первичный анализ фтизиатром и подготовка материалов для врачебной комиссии и представления в МОКПТД.</em>
-                </li>
-                <li><strong>Совместно с фтизиатром оценить:</strong> был ли выявленный туберкулезный процесс <strong>достаточным (по объему и характеру)</strong>, чтобы быть <strong>основной причиной смерти</strong>, или является сопутствующим заболеванием. <strong>Исключить регистрацию смерти от ТБ при незначительных изменениях.</strong></li>
+                <li><strong>ВИЧ-статус обязателен</strong> — без него нельзя точно определить основную причину смерти.</li>
+                <li><strong>Посев МБТ обязателен</strong> — это лабораторная верификация.</li>
+                <li><strong>Решение о роли ТБ принимаем совместно с фтизиатром:</strong> основная причина или сопутствующее? <em>Частая ошибка — установление причины смерти «туберкулёз» при незначительных изменениях.</em></li>
+                <li><strong>Все случаи смерти, где основной причиной является туберкулёз, разбираются коллегиально</strong> (ежемесячно/ежеквартально). При возникновении вопросов для разбора привлекаются специалисты, проводившие патологоанатомическое или судебно-медицинское исследования.</li>
+                <li><strong>Это нужно для:</strong> точной статистики, выявления дефектов лечения, выполнения СанПиН.</li>
             </ul>
         </div>
-    </section>
-
-    <!-- ШАГ 5 -->
-    <section class="step-container" id="step5">
-        <div class="step-header">
-            <div class="step-number">5</div>
-            <h2 class="step-title">Оформление и регистрация</h2>
+        
+        <!-- Кнопка скачивания для стенда -->
+        <div class="download-container">
+            <a href="QR-kode.pdf" 
+               download="Алгоритм_действий_патологоанатом.pdf"
+               class="download-btn">
+                Скачать для стенда
+            </a>
         </div>
-        <div class="step-content">
-            <ul>
-                <li>При необходимости оформить <strong>Свидетельство о смерти взамен выданного</strong>.</li>
-                <li><strong>Привлечь фтизиатра</strong> для помощи в формулировке диагноза и <strong>составлении экстренного извещения в Роспотребнадзор</strong>.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- ОРГАНИЗАЦИОННЫЕ АСПЕКТЫ -->
-    <section class="step-container" id="org">
-        <div class="step-header">
-            <h2 class="step-title">Важные организационные аспекты:</h2>
-        </div>
-        <div class="step-content">
-            <ol>
-                <li><span class="key-point">Коллегиальный разбор всех случаев:</span> ежемесячно (в стационаре), ежеквартально (вне стационара).</li>
-                <li><span class="key-point">Консультации МОКПТД:</span> доступны для сложных микроскопических исследований.</li>
-                <li><span class="key-point">Ответственность:</span> Полная процедура и ответственность за соблюдение всех требований изложены в тексте <strong><a href="./prikaz-1725.pdf" target="_blank">Приказа МЗ МО от 25.12.2020 № 1725 «О порядке взаимодействия врачей-патологоанатомов, врачей-судебно-медицинских экспертов и врачей-фтизиатров на территории Московской области»</a></strong>.</li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- ЗАЧЕМ ЭТО НУЖНО -->
-    <section class="step-container" id="why">
-        <div class="step-header">
-            <h2 class="step-title">Зачем это нужно?</h2>
-        </div>
-        <div class="step-content">
-            <ol>
-                <li><strong>Чтобы правильно определить причину смерти</strong> (ТБ, ВИЧ, иное) и исключить ошибки в кодировании.</li>
-                <li><strong>Чтобы верифицировать диагноз</strong> туберкулеза лабораторно.</li>
-                <li><strong>Чтобы не регистрировать смерть от ТБ</strong>, если его роль была незначительной.</li>
-                <li><strong>Чтобы статистика была достоверной</strong> для оценки эпидемиологической ситуации.</li>
-                <li><strong>Чтобы выполнить требования СанПиН</strong> по регистрации случая и извещению Роспотребнадзора.</li>
-                <li><strong>Чтобы выявить дефекты диагностики и лечения</strong> для улучшения качества помощи.</li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- БЛОК СКАЧИВАНИЯ QR-КОДА -->
-<div class="qr-download-container">
-    <h3 class="qr-download-title">QR-код для быстрого доступа</h3>
-    <p class="qr-download-text">
-        Вы можете скачать QR-код этой инструкции в формате PDF для размещения на стенде в патологоанатомическом отделении или бюро судебно-медицинской экспертизы. При сканировании код откроет полную версию памятки.
-    </p>
-    <a href="QR-kode.pdf" 
-       download="QR-код_Памятка_патологоанатомам.pdf"
-       class="qr-download-btn">
-        <i class="fas fa-qrcode"></i> Скачать QR-код (PDF)
-    </a>
-</div>
-
+    </div>
+    
     <!-- Футер -->
-    <footer class="document-footer">
-        <p><i class="fas fa-hospital-alt"></i> ГБУЗ МО "МОКПТД" | Филиал "Клинский"</p>
-    </footer>
-
-    <script>
-        // Плавная прокрутка для навигации по оглавлению
-        document.querySelectorAll('.toc-list a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 20,
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Подсветка текущего раздела при прокрутке
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('.step-container');
-            const scrollPosition = window.scrollY + 100;
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    document.querySelectorAll('.toc-list a').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === '#' + sectionId) {
-                            link.classList.add('active');
-                            link.style.color = 'var(--primary-blue)';
-                            link.style.fontWeight = '600';
-                        }
-                    });
-                }
-            });
-        });
-    </script>
+    <div class="footer">
+        <p>ГБУЗ МО "МОКПТД" | Филиал "Клинский"</p>
+    </div>
 </body>
 </html>
